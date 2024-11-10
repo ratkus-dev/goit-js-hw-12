@@ -1,0 +1,171 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import 'normalize.css';
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+
+/* Sections style */
+@import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid lightgray;
+  border-top-color: #4e75ff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  max-width: 1158px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 36px auto 32px;
+  max-width: 371px;
+  width: 100%;
+  gap: 8px;
+}
+
+.form__input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  height: 40px;
+  transition: border-color ease-in-out 0.4s;
+  width: 100%;
+  max-width: 371px;
+  box-sizing: border-box;
+}
+
+.form__input:hover,
+.form__input:focus {
+  border: 1px solid #000;
+}
+
+.form__input:visited,
+.form__input:focus-within {
+  border: 1px solid #4e75ff;
+}
+
+.form__input:focus-visible {
+  outline: none;
+}
+
+.form__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 7px 16px;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  border: 1px solid #4e75ff;
+  cursor: pointer;
+  transition: background-color ease-in-out 0.4s;
+}
+
+.btn:hover {
+  border: 1px solid #6c8cff;
+  background-color: #6c8cff;
+}
+
+.btn__load-more {
+  position: relative;
+  left: 50%;
+  margin: 32px auto;
+  transform: translateX(-50%);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.gallery__item {
+  position: relative;
+  border: 1px solid #808080;
+  max-width: 360px;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.gallery__link img {
+  transform: translateY(-48px);
+}
+
+.info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4px 20px;
+  background-color: #fff;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.iziToast > .iziToast-close {
+  background: url('../img/close.svg') no-repeat 50% 50%;
+  background-size: 16px auto;
+}
