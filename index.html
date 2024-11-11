@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-DuwC__W9.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-AL2zCFOW.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Ap18kLCQ.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-CZFpsyDB.css">
   </head>
   <body>
     <main>
@@ -23,15 +23,18 @@
           <input
             class="form__input"
             type="text"
-            name="query"
+            name="searchQuery"
             placeholder="Search images..."
             required
           />
-          <button type="submit" class="btn btn__send">Search</button>
+          <button class="btn btn__send" type="submit">Search</button>
         </form>
+
         <ul class="gallery"></ul>
+        <button type="submit" class="btn btn__load-more hidden">
+          Load more
+        </button>
         <div class="loader hidden"></div>
-        <button class="btn btn__load-more hidden">Load more</button>
       </div>
     </main>
 
