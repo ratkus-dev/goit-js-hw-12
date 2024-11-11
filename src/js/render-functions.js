@@ -1,10 +1,8 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-export const galleryContainer = document.querySelector('.gallery');
-export const loadMoreBtn = document.querySelector('.btn__load-more');
-
 export function renderImages(images) {
+  const gallery = document.querySelector('.gallery');
   const markup = images
     .map(
       ({
@@ -29,21 +27,15 @@ export function renderImages(images) {
       </li>`
     )
     .join('');
-
-  galleryContainer.insertAdjacentHTML('beforeend', markup);
-
+  gallery.insertAdjacentHTML('beforeend', markup);
   const lightbox = new SimpleLightbox('.gallery a');
   lightbox.refresh();
 }
 
 export function clearGallery() {
-  galleryContainer.innerHTML = '';
+  document.querySelector('.gallery').innerHTML = '';
 }
 
-export function showLoadMoreButton() {
-  loadMoreBtn.classList.remove('hidden');
-}
-
-export function hideLoadMoreButton() {
-  loadMoreBtn.classList.add('hidden');
+export function showEndOfResultsMessage() {
+  alert("We're sorry, but you've reached the end of search results.");
 }
