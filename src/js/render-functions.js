@@ -35,7 +35,3 @@ export function renderImages(images) {
 export function clearGallery() {
   document.querySelector('.gallery').innerHTML = '';
 }
-
-export function showEndOfResultsMessage() {
-  alert("We're sorry, but you've reached the end of search results.");
-}

@@ -102,9 +102,9 @@ loadMoreBtn.addEventListener('click', async () => {
 });
 
 function showLoader() {
-  loader.classList.add('visible');
+  loader.classList.remove('hidden');
 }
 
 function hideLoader() {
-  loader.classList.remove('visible');
+  loader.classList.add('hidden');
 }

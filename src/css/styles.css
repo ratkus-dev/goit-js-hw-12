@@ -23,6 +23,10 @@
   display: none;
 }
 
+.visible {
+  display: inline-block;
+}
+
 ul {
   padding: 0;
   margin: 0;
